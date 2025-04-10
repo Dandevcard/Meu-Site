@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 20% 97%; /* #F1EFEC */
+    --foreground: 240 6% 1%; /* #030303 */
+
+    --card: 36 20% 97%; /* #F1EFEC */
+    --card-foreground: 240 6% 1%; /* #030303 */
+
+    --popover: 36 20% 97%; /* #F1EFEC */
+    --popover-foreground: 240 6% 1%; /* #030303 */
+
+    --primary: 213 64% 21%; /* #123458 */
+    --primary-foreground: 36 20% 97%; /* #F1EFEC */
+
+    --secondary: 32 19% 79%; /* #D4C9BE */
+    --secondary-foreground: 240 6% 1%; /* #030303 */
+
+    --muted: 32 19% 79%; /* #D4C9BE */
+    --muted-foreground: 215 28% 17%; /* #162A3A - versão mais clara do azul para texto */
+
+    --accent: 32 19% 79%; /* #D4C9BE */
+    --accent-foreground: 240 6% 1%; /* #030303 */
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 36 20% 97%; /* #F1EFEC */
+
+    --border: 32 19% 79%; /* #D4C9BE */
+    --input: 32 19% 79%; /* #D4C9BE */
+    --ring: 213 64% 21%; /* #123458 */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 6% 1%; /* #030303 */
+    --foreground: 36 20% 97%; /* #F1EFEC */
+
+    --card: 240 6% 10%; /* versão mais clara do preto para cards */
+    --card-foreground: 36 20% 97%; /* #F1EFEC */
+
+    --popover: 240 6% 10%; /* versão mais clara do preto para popovers */
+    --popover-foreground: 36 20% 97%; /* #F1EFEC */
+
+    --primary: 213 64% 21%; /* #123458 */
+    --primary-foreground: 36 20% 97%; /* #F1EFEC */
+
+    --secondary: 32 19% 79%; /* #D4C9BE */
+    --secondary-foreground: 240 6% 1%; /* #030303 */
+
+    --muted: 240 6% 15%; /* versão mais clara do preto para áreas mutadas */
+    --muted-foreground: 32 19% 79%; /* #D4C9BE */
+
+    --accent: 213 64% 21%; /* #123458 */
+    --accent-foreground: 36 20% 97%; /* #F1EFEC */
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 36 20% 97%; /* #F1EFEC */
+
+    --border: 240 6% 15%; /* versão mais clara do preto para bordas */
+    --input: 240 6% 15%; /* versão mais clara do preto para inputs */
+    --ring: 213 64% 21%; /* #123458 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
