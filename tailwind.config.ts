@@ -57,7 +57,7 @@ const config = {
         palette: {
           offwhite: "#F1EFEC",
           beige: "#D4C9BE",
-          blue: "#123458",
+          blue: "#000075",
           black: "#030303",
         },
       },

@@ -13,10 +13,10 @@
     --popover: 36 20% 97%; /* #F1EFEC */
     --popover-foreground: 240 6% 1%; /* #030303 */
 
-    --primary: 213 64% 21%; /* #123458 */
+    --primary: 183 92% 39%;/* #123458 */
     --primary-foreground: 36 20% 97%; /* #F1EFEC */
 
-    --secondary: 32 19% 79%; /* #D4C9BE */
+    --secondary: 27 100% 70%;/*32 19% 79%;  #D4C9BE */
     --secondary-foreground: 240 6% 1%; /* #030303 */
 
     --muted: 32 19% 79%; /* #D4C9BE */
