@@ -26,7 +26,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="container px-4 py-12 md:px-6 md:py-24 bg-palette-beige/30"
+      className="container px-2 py-12 md:px-6 md:py-24 bg-palette-beige/30"
     >
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
         <div className="space-y-2">

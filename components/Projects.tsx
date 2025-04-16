@@ -103,7 +103,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, x: 0, y: 0 }}
               whileHover={{ scale: 1.09 }} // Aumenta o tamanho ao passar o mouse
               transition={{
-                duration: 0.3,
+                duration: 0.8,
                 ease: "easeOut",
                 delay: 0.1 * index,
               }}
@@ -122,7 +122,7 @@ export default function Projects() {
                   <h3 className="font-semibold text-xl mb-2">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-gray-500 mb-4">
+                  <p className="text-sm text-gray-500 mb-4 text-justify">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">

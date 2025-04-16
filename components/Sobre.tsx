@@ -16,12 +16,12 @@ export default function Sobre() {
   return (
     <section
       id="about"
-      className="container pb-10 px-4 pt-8 md:px-6 mx-auto"
+      className="container  pb-10 px-6 pt-8 lg:px-6 mx-auto"
     >
-      <div className="flex md:flex-row flex-col justify-center gap-20 items-center">
+      <div className="flex lg:flex-row flex-col justify-center gap-20 md:mt-8 items-center">
         {/* Texto com animação vindo da esquerda */}
         <motion.div
-          className="w-full md:w-1/2"
+          className="w-full "
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -53,7 +53,7 @@ export default function Sobre() {
 
         {/* Imagem com animação vindo da direita */}
         <motion.div
-          className="relative aspect-square md:mt-14 w-full max-w-[360px] md:w-[400px] md:h-[400px] overflow-hidden rounded-xl border-2 border-primary"
+          className="relative aspect-square lg:mt-14 w-full max-w-[360px] md:w-[400px] md:h-[400px] overflow-hidden rounded-xl border-2 border-primary"
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
@@ -69,7 +69,7 @@ export default function Sobre() {
 
       {/* Seção de Experiência */}
       <div className="mt-16">
-        <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl text-primary">
+        <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl text-primary ">
           Experiência
         </h2>
         <div className="mt-6 grid gap-6">
@@ -84,7 +84,7 @@ export default function Sobre() {
                 <CardDescription>ColabDevs • 2024 - Presente</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground dark:text-gray-400">
+                <p className="text-muted-foreground dark:text-gray-400 text-justify">
                   Desenvolvimento de aplicações web utilizando React, Next.js e
                   Node.js. Implementação de interfaces responsivas com Tailwind
                   CSS e integração com APIs RESTful.
@@ -104,7 +104,7 @@ export default function Sobre() {
                 <CardDescription>PetLove • 2023 - 2024</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground dark:text-gray-400">
+                <p className="text-muted-foreground dark:text-gray-400 text-justify">
                   Criação de interfaces de usuário responsivas e acessíveis
                   utilizando HTML, CSS e JavaScript. Implementação de designs
                   utilizando bibliotecas como React e frameworks CSS.

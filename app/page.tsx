@@ -7,8 +7,8 @@ import Modelos from "@/components/Modelos";
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="container flex flex-col -mt-12 md:-mt-14 ">
-        <main className="flex-1 space-y-14 md:space-y-0">
+      <div className=" flex flex-col -mt-12 md:-mt-14 ">
+        <main className="flex-1 space-y-14 md:space-y-0 overflow-hidden">
           <Eu />
           <Sobre />
           <Projects />

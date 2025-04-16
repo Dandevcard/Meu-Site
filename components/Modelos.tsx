@@ -122,7 +122,7 @@ export default function Modelos() {
                 </div>
                 <CardContent className="p-4 flex flex-col flex-1">
                   <h3 className="font-semibold text-xl mb-2">{template.title}</h3>
-                  <p className="text-sm text-gray-500 mb-4">{template.description}</p>
+                  <p className="text-sm text-gray-500 mb-4 text-justify">{template.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {template.tags.map((tag, index) => (
                       <span key={index} className="bg-black text-primary text-xs px-2 py-1 rounded-full">

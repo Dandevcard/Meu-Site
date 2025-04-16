@@ -11,10 +11,10 @@ export default function Eu() {
   return (
     <section
       id="home"
-      className="w-full min-h-screen pt-24 md:pt-0 bg-background text-foreground py-16 md:py-24 lg:py-32 xl:py-48"
+      className="w-full min-h-screen pt-20 md:pt-20 bg-background text-foreground  md:py-24 lg:py-32 xl:py-48"
     >
-      <div className="container px-4 md:px-0">
-        <div className="flex flex-col md:flex-row items-center justify-around px-10 gap-12">
+      <div className="container px-0 md:px-0">
+        <div className="flex flex-col lg:flex-row items-center justify-around px-6 gap-12">
           {/* Texto com animações */}
           <motion.div
             className="flex flex-col justify-center space-y-6"
@@ -35,17 +35,17 @@ export default function Eu() {
               </motion.h1>
 
               <motion.p
-                className="max-w-[600px] text-balance text-muted-foreground md:text-xl"
+                className="max-w-[600px] text-balance text-muted-foreground md:text-xl text-justify"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1, duration: 0.6, ease: "easeOut" }}
               >
-                Desenvolvedor Full Stack especializado em criar experiências web
+                Desenvolvedor Full-Stack especializado em criar experiências web
                 modernas e responsivas com React, Next.js e Tailwind CSS.
               </motion.p>
 
               <motion.p
-                className="max-w-[600px] text-balance text-muted-foreground md:text-xl"
+                className="max-w-[600px] text-balance text-muted-foreground md:text-xl text-justify"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
