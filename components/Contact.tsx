@@ -1,5 +1,6 @@
-'use client';
-import React from "react";
+"use client";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import {
   Card,
   CardContent,
@@ -23,6 +24,32 @@ import {
 import { motion } from "framer-motion";
 
 export default function Contact() {
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!formRef.current) return;
+
+    emailjs
+      .sendForm(
+        "service_5j43rmw", // <- coloque aqui seu service ID
+        "template_k8x6q7o", // <- coloque aqui seu template ID
+        formRef.current,
+        "aXIlMIHnqX2eQDqON" // <- coloque aqui sua public key
+      )
+      .then(
+        () => {
+          alert("Mensagem enviada com sucesso!");
+          formRef.current?.reset();
+        },
+        (error) => {
+          console.error("Erro ao enviar:", error);
+          alert("Houve um erro ao enviar sua mensagem. Tente novamente.");
+        }
+      );
+  };
+
   return (
     <section
       id="contact"
@@ -56,7 +83,7 @@ export default function Contact() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form className="space-y-4">
+              <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
                 <div className="space-y-2">
                   <Label htmlFor="name">Nome</Label>
                   <Input
@@ -127,7 +154,9 @@ export default function Contact() {
                     Daniel.dev.cardoso@gmail.com
                   </p>
                   <a
-                    href="mailto:seu-email@exemplo.com"
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=daniel.dev.cardoso@gmail.com&su=Contato%20via%20portfólio&body=Olá%20Daniel%2C%20gostaria%20de%20falar%20sobre..."
+                    target="_blank"
+                    rel="noreferrer"
                     className="text-sm text-primary hover:underline mt-1 inline-block"
                   >
                     Enviar email
@@ -141,7 +170,7 @@ export default function Contact() {
                   <h3 className="font-medium">Telefone</h3>
                   <p className="text-sm text-gray-500 mt-1">(69) 99249-7814</p>
                   <a
-                    href="tel:+5500000000000"
+                    href="tel:+5569992497814"
                     className="text-sm text-primary hover:underline mt-1 inline-block"
                   >
                     Ligar agora
@@ -155,10 +184,10 @@ export default function Contact() {
                   <h3 className="font-medium">WhatsApp</h3>
                   <p className="text-sm text-gray-500 mt-1">(69) 99249-7814</p>
                   <a
-                    href="https://wa.me/6999249-7814"
+                    href="https://wa.me/5569992497814"
                     target="_blank"
-                    className="text-sm text-primary hover:underline mt-1 inline-block"
                     rel="noreferrer"
+                    className="text-sm text-primary hover:underline mt-1 inline-block"
                   >
                     Conversar no WhatsApp
                   </a>
